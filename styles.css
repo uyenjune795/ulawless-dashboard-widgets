@@ -1,0 +1,46 @@
+/* Grid */
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.layout {
+  background: url(images/weather-bg.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.container {
+  margin: 5em;
+  background-color: #abd7e032;
+  border-radius: 2em;
+  /* Set your own grid   */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 60vh;
+  align-items: center;
+  position: relative;
+}
+
+
+/* Widgets */
+section {
+  padding: 1em;
+  /* Relative Parent. Absolute Child */
+  position: relative;
+}
+
+.weather {
+  display: flex;
+}
+
+.city{
+  text-transform: uppercase;
+}
+
+.temp {
+  font-size: 2em;
+}
