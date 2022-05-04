@@ -10,7 +10,7 @@ const timeNow = new Date();
 // console.log( timeNow );
 
 // Get current hours
-let gotHours = timeNow.getHours();
+let gotHours = timeNow.getHours()+14;
 // Get current minutes
 let gotMinutes = timeNow.getMinutes();
 
