@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Widget</title>
+    <title>Inspirational Weather Widget</title>
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
@@ -17,6 +17,7 @@
     <!-- My Styles -->
     <link rel="stylesheet" href="styles.css">
     <!-- My Scripts -->
+    <script defer src="js/script.js"></script>
     <script defer src="js/time.js"></script>
     <script defer src="js/date.js"></script>
     <script defer src="js/weather.js"></script>
@@ -25,19 +26,30 @@
 <body>
 
   <main class="layout">
+    <div id="bgProgress"></div>
     <div class="container">
 
+      <section class="weather">
       <!-- Weather -->
-    <section class="weather">
-      <!--
+      <!--<section class="weather">
         <data value="" class="city">City</data>
         <data value="" class="temp">Temp</data>
         <img src="https://via.placeholder.com/150" alt="Placeholder">
         <data value="" class="description">Description</data>
       -->
+    </section>
+    
+     <!--  Date -->
+     <section class="date">
+      <date>
+        <data class="dayOfWeek">SMTWTFS</data>,
+        <data class="month">Month</data>
+        <data class="dayOfMonth">00</data>,
+        <data class="year">0000</data>
+      </date>
       </section>
-      
-    <!-- Time -->
+
+      <!-- Time -->
       <section class="time">
         <time>
           <data class="hours">HH</data> :
@@ -46,17 +58,9 @@
         </time>
       </section>
 
-      <!--  Date -->
-      <section class="date">
-      <time>
-        <data class="month">Month</data>
-        <data class="dayOfMonth">00</data>,
-        <data class="year">0000</data> -
-        <data class="dayOfWeek">SMTWTFS</data>
-      </time>
-      </section>
-
-    </div>
+     
+    
+  </div>
   </main>  
     
 </body>

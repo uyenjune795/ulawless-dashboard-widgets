@@ -1,46 +1,108 @@
 /* Grid */
+@import url(zodiak.css);
 
-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Zodiak-Variable';
+  letter-spacing: .07em;
 }
+
 
 .layout {
-  background: url(images/weather-bg.jpg);
-  background-position: center;
   background-size: cover;
-}
-
-.container {
-  margin: 5em;
-  background-color: #abd7e032;
-  border-radius: 2em;
-  /* Set your own grid   */
+  background-position: center;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 60vh;
+  height: 100vh;
   align-items: center;
+  line-height: 1;
+  color: #fff;
   position: relative;
+  z-index: -2;
 }
 
+.layout:after {
+  content: "";
+  background: rgba(100, 100, 100, .6);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.container {
+  height: 420px;
+  width: 320px;
+  background-color: #d0cfcf61;
+  border-radius: 30px;
+  /* change if you like */
+  text-align: center;
+}
+
+#bgProgress {
+  height: 5px;
+  width: 0;
+  background: rgba(0, 0, 0, .3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: width .13s linear;
+}
 
 /* Widgets */
 section {
-  padding: 1em;
+  display: flex;
+  border-radius: 30px;
+  margin-bottom: 10px;
+  flex-direction: column;
   /* Relative Parent. Absolute Child */
   position: relative;
 }
 
-.weather {
-  display: flex;
+.city{
+  padding-top: 1.8em;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.2em;
+  letter-spacing: .4em;
+  padding-bottom: 3.8em;
 }
 
-.city{
-  text-transform: uppercase;
+.weather {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.weather img {
+  margin-top: -.5em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 22%;
 }
 
 .temp {
-  font-size: 2em;
+  font-size: 4.4em;
+  font-weight: 600;
+  letter-spacing: .02em;
+}
+
+.description {
+  font-family: 'Zodiak-Italic';
+  font-size: 1.05em;
+  margin-top: -1em;
+  padding-bottom: 3.8em;
+}
+
+.date {
+  font-size: .9em;
+  font-weight: 600;
+}
+
+.time {
+  font-size: 1.2em;
 }
